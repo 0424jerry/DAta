@@ -1,0 +1,40 @@
+static void bubbleSort(int *array, int n){
+  int temp;
+    for(;n > 1; n--){
+      for(int i = 0;i < (n - 1);i++){
+        if(array[i] > array[i + 1]){
+          temp = array[i];
+          array[i] = array[i+1];
+          array[i+1] = temp;
+        }
+      }
+    }   
+      
+}
+	static void insertionSort(int *array, int n){
+    int next;
+    int tmp;
+    for(int i = 1 ; i < n ; i++){
+      tmp = array[i];
+      next = i;
+      while((next > 0) && (array[next - 1] > tmp)){
+        array[next] = array[next - 1];
+        next--;
+      }
+      array[next] = tmp;
+    }
+   
+	}
+	static void selectionSort(int *array, int n){
+    int tmp;
+    for(int i =0 ; i < n- 1; i++){
+      for(int j = i + 1; j < n; j++){
+          if(array[i] > array[j]){
+            tmp = array[i];
+            array[i] = array[j];
+            array[j] = tmp;
+          }
+      }
+    }
+    
+	}
